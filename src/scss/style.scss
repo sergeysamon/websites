@@ -434,12 +434,15 @@ button {
         left: 140px;
         .twitter {
             background: url(../images/twitter.svg) no-repeat center;
+            background-color: $theme-color;
         }
         .facebook {
             background: url(../images/facebook.svg) no-repeat center;
+            background-color: $theme-color;
         }
         .instagram {
             background: url(../images/instagram.svg) no-repeat center;
+            background-color: $theme-color;
         }
         a {
             width: 50px;

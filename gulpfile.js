@@ -15,6 +15,7 @@ var htmlbeautify = require('gulp-html-beautify');
 var cssBase64 = require('gulp-css-base64');
 
 var DEBUG = process.env.DEBUG == "false" ? false : true;
+console.log(DEBUG)
 var TARGET = process.env.npm_lifecycle_event;
 
 gulp.task('serve', function () {
@@ -64,7 +65,7 @@ gulp.task('rimraf', function (cb) {
 gulp.task('images', function () {
     if (!DEBUG) {
         return gulp.src('src/images/**/*')
-            .pipe(imagemin())
+            // .pipe(imagemin())
             .pipe(gulp.dest('dist/images'))
             .pipe(browserSync.stream());
     }
@@ -75,6 +76,15 @@ gulp.task('fonts', function () {
     if (!DEBUG) {
         return gulp.src('src/fonts/**/*')
             .pipe(gulp.dest('dist/fonts'))
+            .pipe(browserSync.stream());
+    }
+
+});
+// video
+gulp.task('video', function () {
+    if (!DEBUG) {
+        return gulp.src('src/video/**/*')
+            .pipe(gulp.dest('dist/video'))
             .pipe(browserSync.stream());
     }
 
@@ -98,7 +108,6 @@ gulp.task('css', function () {
             .pipe(gulp.dest("dist/css"))
             .pipe(browserSync.stream());
     }
-    console.log("hi1")
 });
 
 
@@ -106,7 +115,7 @@ gulp.task('css', function () {
 gulp.task('scss', function () {
 
     if (DEBUG) {
-        return gulp.src("src/scss/**/*.scss")
+        return gulp.src("src/scss/style.scss")
             .pipe(sass().on('error', sass.logError))
             .pipe(cssBase64())
             .pipe(autoprefixer({
@@ -135,7 +144,7 @@ gulp.task('scss', function () {
 gulp.task('html', function () {
     if (!DEBUG) {
         return gulp.src("src/*.html")
-            .pipe(htmlbeautify())
+            // .pipe(htmlbeautify())
             .pipe(gulp.dest("dist/"))
             .pipe(browserSync.stream());
     }
@@ -159,6 +168,7 @@ gulp.task('syncBuild', function (callback) {
         'rimraf',
         'fonts',
         'images',
+        'video',
         'css',
         'scss',
         'js',
