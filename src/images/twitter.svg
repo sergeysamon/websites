@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 24px;
+        fill: #fff;
+        text-anchor: middle;
+        font-family: FontAwesome;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <text id="twitter" class="cls-1" x="10.346" y="18.258"><tspan x="10.346"></tspan></text>
+</svg>

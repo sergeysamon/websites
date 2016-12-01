@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="129" viewBox="0 0 129 129">
+  <defs>
+    <style>
+      .play-icon,.play {
+        font-size: 150px;
+        <!--fill: #fff;-->
+        font-family: FontAwesome;
+      }
+    </style>
+  </defs>
+  <text class="play-icon" y="118.215"></text>
+</svg>
