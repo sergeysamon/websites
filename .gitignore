@@ -1,5 +1,4 @@
 node_modules
-dist
 .idea
 src/css/.DS_Store
 src/fonts/icomoon/.DS_Store
